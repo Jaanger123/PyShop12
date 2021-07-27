@@ -17,7 +17,6 @@ def product_list(request, slug):
 
 def product_detail(request, id):
     product = Product.objects.get(id=id)
-    print(product)
     return render(request, 'products/detail.html', {'product': product})
 
 
