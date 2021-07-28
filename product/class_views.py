@@ -18,6 +18,7 @@ class ProductListView(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
+        print(self.kwargs)
         slug = self.kwargs.get('slug')
         queryset = queryset.filter(category__slug=slug)
         return queryset
