@@ -14,6 +14,7 @@
           <h5 class="card-title"><a href="{% url 'detail' product.id %}">{{ product.name }}</a></h5>
           <p class="card-text">{{ product.description|truncatechars:300 }}</p>
           <p class="card-text"><small class="text-muted">{{ product.price }} сом</small></p>
+          <a class="btn btn-success" href="{% url 'cart_add' product.id %}" role="button">Add to cart</a>
         </div>
       </div>
     </div>
